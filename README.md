@@ -10,3 +10,5 @@ yarn add redux react-redux
 ```
 yarn add redux-thunk
 ```
+
+[Видео](https://www.youtube.com/watch?v=G3GGXIhggGs)

@@ -7,13 +7,16 @@ import {rootReducer} from "./redux/root-reducer";
 
 import './index.css';
 import App from './App';
+import {forbiddenWordsMiddleware} from "./redux/middleware";
 
 
 // import reportWebVitals from './reportWebVitals';
 
 const store = createStore(
     rootReducer,
-    compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+    compose(
+        applyMiddleware(thunk, forbiddenWordsMiddleware),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 );
 
 const app = (
